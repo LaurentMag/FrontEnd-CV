@@ -1,0 +1,22 @@
+.flex-container {
+  margin-inline: auto;
+  max-width: 40%;
+}
+
+.flextest {
+  display: flex;
+  gap: 1rem;
+  margin: 5rem 0;
+}
+
+.box {
+  height: 5rem;
+  width: 100%;
+  border: 3px solid black;
+}
+
+.box2 {
+  height: 5rem;
+  width: 100%;
+  border: 3px solid red;
+}

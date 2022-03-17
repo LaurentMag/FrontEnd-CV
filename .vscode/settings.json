@@ -1,0 +1,12 @@
+{
+  "files.exclude": {
+    "robots.txt": true,
+    "site.webmanifest": true,
+    "LICENSE.txt": true,
+    "404.html": true,
+    "browserconfig.xml": true,
+    "package.json": true,
+    "package-lock.json": true,
+    "humans.txt": true
+  }
+}

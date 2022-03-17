@@ -3,9 +3,6 @@
 // -----------------------------------------------------------------------------
 
 
-
-
-
 /// Regular font family
 /// @type List
 $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
@@ -13,9 +10,6 @@ $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvet
 /// Code (monospace) font family
 /// @type List
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
-
-
-
 
 
 /// Copy text color
@@ -39,16 +33,9 @@ $mid-grey: rgb(153, 153, 153) !default;
 $dark-grey: rgb(68, 68, 68) !default;
 
 
-
-
-
 /// Container's maximum width
 /// @type Length
 $max-width: 1180px !default;
-
-
-
-
 
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
@@ -59,13 +46,46 @@ $breakpoints: (
   'large': 1024px,
 ) !default;
 
-
-
-
-
-
 /// Relative or absolute URL where all assets are served from
 /// @type String
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
 $base-url: '/assets/' !default;
+//------------------------------------------------------------------------------------------------
+
+//------------------------------------------------
+$margin-nav-left:40%;
+
+$margin-about-me-left-h2: 1.5rem;
+$margin-about-me-left-h3-multiplier: 1.6;
+
+//------------------------------------------------
+$font-molot: "Molot", sans-serif;
+$font-smooth-sans: 'Smooch Sans', sans-serif;
+
+//------------------------------------------------
+$font-size-navbar: 1.5rem;
+$font-size-parallax-title: 4rem;
+
+$font-size-h2: 2rem;
+$font-size-h3: 1.5rem;
+$font-size-p: 1.1rem;
+
+$font-letter-spacing-navbar: 0.08rem;
+$font-letter-spacing-h2: 0.03rem;
+
+$font-line-height-h3: 0.2rem;
+
+//------------------------------------------------
+$color-font-navbar: rgb(231, 226, 226);
+$color-font-parallax-title: white;
+
+$color-background-gray: rgb(175, 179, 182);
+// $color-background-gray: rgb(202, 200, 194);
+
+$color-blue-from-bokeh: rgb(13, 140, 172);
+
+//------------------------------------------------
+
+$shadow-color-shadow-light: rgba(27, 23, 23, 0.151);
+$shadow-color-orange: rgb(190, 120, 50);

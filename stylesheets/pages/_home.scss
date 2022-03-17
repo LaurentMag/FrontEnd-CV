@@ -1,0 +1,119 @@
+// PARALLAX ========================================================================================
+// =================================================================================================
+.body-hide-overflow {
+  overflow: hidden;
+}
+
+.parallax__container {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100vh;
+  perspective: 10px;
+}
+
+// ----------------------------------------------------------------
+
+.parallax__group {
+  position: relative;
+  transform-style: preserve-3d;
+  z-index: -2;
+  height: 100vh;
+}
+
+.parallax__group::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/pexels-artem-saranin-1202840.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  transform: translateZ(-9px) scale(1.95);
+  min-height: 100vh;
+}
+
+// ----------------------------------------------------------------
+
+.parallax__heading {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translateZ(-7px) scale(1.2);
+}
+
+// About me ========================================================================================
+// =================================================================================================
+
+main {
+  background-color: $color-background-gray;
+}
+
+// ----------------------------------------------------------------
+
+.container-aboutme {
+  margin-inline: 1rem;
+
+  .aboutme {
+    isolation: isolate;
+    padding: 2rem 1rem;
+    display: grid;
+    gap: 0.5rem;
+    h2 {
+      margin-left: $margin-about-me-left-h2;
+    }
+
+    h3 {
+      margin-left: calc($margin-about-me-left-h2 * $margin-about-me-left-h3-multiplier);
+      line-height: $font-line-height-h3;
+      margin-bottom: calc(1rem - $font-line-height-h3);
+    }
+    p {
+      margin: 1rem 2rem;
+    }
+
+    figure {
+      position: relative;
+      margin: 1rem 2rem;
+      grid-row: 3 / 4;
+      justify-self: end;
+      max-width: 45%;
+
+      &::after {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        background-color: peru;
+        top: 55%;
+        left: 10%;
+        transform: translate(-50%, -50%);
+        width: 110%;
+        height: 100%;
+      }
+    }
+
+    // ----------------------------------------------------------------
+
+    .aboutme__container-buttons {
+      justify-self: center;
+
+      display: flex;
+      gap: 2rem;
+    }
+
+    img {
+      aspect-ratio: 0.8 / 1;
+      box-shadow: -0.5rem 0.5rem 4px 0 $shadow-color-shadow-light;
+    }
+  }
+}
+
+.tempcontent {
+  background-color: rgb(109, 103, 103);
+  color: white;
+  font-size: 1.3rem;
+}
+
+.contenttemp {
+  padding: 2rem;
+}
+

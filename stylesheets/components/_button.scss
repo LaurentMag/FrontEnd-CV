@@ -1,3 +1,28 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+.button-general {
+  cursor: pointer;
+  text-decoration: none;
+
+  border: none;
+  padding: 1rem;
+  width: 6rem;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.aboutme__button-work {
+    background-color: $color-blue-from-bokeh;
+    color: white;
+}
+
+.aboutme__button-work:hover, .aboutme__button-work:focus {
+  box-shadow: -1.5rem 0.5rem 0 rgba(66, 66, 66, 0.445);
+  transform: translate(5%, -15%);
+}
+
+.aboutme__button-contact:hover, .aboutme__button-contact:focus {
+    box-shadow: 1.5rem 0.5rem 0 rgba(58, 56, 56, 0.445);
+    transform: translate(-5%, -15%);
+}
