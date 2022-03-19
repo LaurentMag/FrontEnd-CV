@@ -32,3 +32,23 @@
   }
 }
 
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+
+/* GRIDS */
+@mixin grid-column($value, $column-gap: null, $row-gap: null) {
+  display: grid;
+  grid-template-columns: $value;
+  column-gap: $column-gap;
+  row-gap: $row-gap;
+  @content;
+}
+
+/* FLEX */
+@mixin flex-modulable($direction: null, $justify: null, $align: null, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}

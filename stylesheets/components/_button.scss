@@ -1,6 +1,9 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+// ----------------------------------------------------------------
+
 .button-general {
   cursor: pointer;
   text-decoration: none;
@@ -9,20 +12,88 @@
   padding: 1rem;
   width: 6rem;
 
-  transition: all 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .aboutme__button-work {
-    background-color: $color-blue-from-bokeh;
-    color: white;
+  background-color: $color-blue-from-bokeh;
+  color: white;
 }
 
-.aboutme__button-work:hover, .aboutme__button-work:focus {
+.aboutme__button-work:hover {
   box-shadow: -1.5rem 0.5rem 0 rgba(66, 66, 66, 0.445);
-  transform: translate(5%, -15%);
+  transform: translate(0, -5%);
+}
+.aboutme__button-work:active {
+  background-color: rgb(7, 82, 100);
 }
 
-.aboutme__button-contact:hover, .aboutme__button-contact:focus {
-    box-shadow: 1.5rem 0.5rem 0 rgba(58, 56, 56, 0.445);
-    transform: translate(-5%, -15%);
+.aboutme__button-contact:hover {
+  box-shadow: 1.5rem 0.5rem 0 rgba(58, 56, 56, 0.445);
+  transform: translate(0, -5%);
+}
+
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// burger button
+
+.burger-button {
+  z-index: 10;
+
+  position: fixed;
+  top: $button-burger-pos-top;
+  right: $button-burger-pos-right;
+
+  height: $button-burger-line-height;
+  width: $button-burger-line-width;
+  padding: 12px 0;
+
+  cursor: pointer;
+  background-color: $button-burger-background-color;
+  background-clip: content-box;
+  box-sizing: content-box;
+
+  transition: background 50ms ease-in-out $button-burger-transition-delay;
+
+  &::before,
+  &::after {
+    z-index: 3;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $button-burger-line-height;
+    width: 100%;
+    background-color: $button-burger-background-color;
+
+    transition: top $button-burger-transition-time ease-in $button-burger-transition-delay,
+      transform $button-burger-transition-time ease-in 0s;
+  }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    top: 83%;
+  }
+}
+
+// ______________________________________
+
+.js-burgerButtonChange {
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    transition: top $button-burger-transition-time ease-in 0s,
+      transform $button-burger-transition-time ease-in $button-burger-transition-delay;
+    top: 50%;
+  }
+
+  &::before {
+    transform: rotate(-45deg) scale(1.2);
+  }
+  &::after {
+    transform: rotate(45deg) scale(1.2);
+  }
 }

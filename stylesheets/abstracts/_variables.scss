@@ -60,6 +60,8 @@ $margin-about-me-left-h2: 1.5rem;
 $margin-about-me-left-h3-multiplier: 1.6;
 
 //------------------------------------------------
+// FONT
+
 $font-molot: "Molot", sans-serif;
 $font-smooth-sans: 'Smooch Sans', sans-serif;
 
@@ -86,6 +88,19 @@ $color-background-gray: rgb(175, 179, 182);
 $color-blue-from-bokeh: rgb(13, 140, 172);
 
 //------------------------------------------------
-
 $shadow-color-shadow-light: rgba(27, 23, 23, 0.151);
 $shadow-color-orange: rgb(190, 120, 50);
+
+//------------------------------------------------
+// BURGER BUTTON NAVBAR
+$button-burger-pos-top: 25px;
+$button-burger-pos-right: 25px;
+
+$button-burger-line-height: 0.3rem;
+$button-burger-line-width: 2.3rem;
+$button-burger-before-after-distance: 0.7rem;
+$button-burger-background-color: white;
+$button-burger-background-color-transparent: rgba(255, 255, 255, 0);
+
+$button-burger-transition-time: 0.1s;
+$button-burger-transition-delay: 0.2s;

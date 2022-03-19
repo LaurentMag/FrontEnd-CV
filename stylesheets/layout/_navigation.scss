@@ -1,19 +1,67 @@
+// .nav-center {
+//    @include flex-modulable(null, right);
+// }
+
 nav {
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    margin-left: $margin-nav-left;
-    width: 60%;
+  @include flex-modulable(null, center);
+
+  position: fixed;
+  top: calc($button-burger-pos-top * 1.4);
+  right: $button-burger-pos-right;
+  z-index: 1;
+
+  margin-inline: auto;
+  background-color: rgba(0, 0, 0, 0.842);
+  // -----------------------
+  width: $button-burger-line-width;
+  transform: scaleY(0);
+  opacity: 0;
+  transform-origin: top right;
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
   ul {
+    @include flex-modulable(column, center, null, 3rem);
 
-    display: flex;
-    justify-content: space-around;
-
+    margin: 4rem 0;
 
     font-size: $font-size-navbar;
     font-family: $font-molot;
     letter-spacing: $font-letter-spacing-navbar;
     color: $color-font-navbar;
+  }
+}
+//------------------------------------------------
+// JS CLASS
 
+.js-navbarOpen {
+  transform: scaleY(1);
+  width: 75%;
+  opacity: 1;
+}
+
+//------------------------------------------------
+// MEDIA
+@media only screen and (min-width: 1024px) {
+  .nav-center {
+    nav {
+      margin-left: $margin-nav-left;
+      width: 60%;
+      background-color: rgba(255, 255, 255, 0);
+      ul {
+        @include flex-modulable(row, space-around, null, 3rem);
+
+        margin-top: 0.5rem;
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+// ______________________________________
+// used if browser support the setting, yet firefox seem to support it
+// but still doesnt display the blur.
+@supports (backdrop-filter: blur(6px)) {
+  nav {
+    background-color: rgba(0, 0, 0, 0.651);
+    backdrop-filter: blur(6px);
   }
 }
