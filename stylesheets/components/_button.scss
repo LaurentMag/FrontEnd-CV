@@ -12,6 +12,8 @@
   padding: 1rem;
   width: 6rem;
 
+  box-shadow: -0.3rem 0.3rem 4px 0 $shadow-color-shadow-light;
+
   transition: 0.2s ease-in-out;
 }
 
@@ -78,7 +80,10 @@
   }
 }
 
-// ______________________________________
+//------------------------------------------------
+//------------------------------------------------
+//------------------------------------------------
+// JS CLASS
 
 .js-burgerButtonChange {
   background-color: transparent;
@@ -86,14 +91,14 @@
   &::before,
   &::after {
     transition: top $button-burger-transition-time ease-in 0s,
-      transform $button-burger-transition-time ease-in $button-burger-transition-delay;
+      transform $button-burger-transition-time ease-in .5s;
     top: 50%;
   }
 
   &::before {
-    transform: rotate(-45deg) scale(1.2);
+    transform: rotate(-45deg);
   }
   &::after {
-    transform: rotate(45deg) scale(1.2);
+    transform: rotate(45deg);
   }
 }

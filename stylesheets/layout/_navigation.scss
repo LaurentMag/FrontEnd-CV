@@ -1,44 +1,126 @@
-// .nav-center {
-//    @include flex-modulable(null, right);
-// }
+$navbar-pos-offset: 30px;
+$navbar-li-height: 60px;
+$navbar-li-width: 240px;
+
+$transition-navbar-open: 0.5s;
 
 nav {
-  @include flex-modulable(null, center);
-
   position: fixed;
-  top: calc($button-burger-pos-top * 1.4);
-  right: $button-burger-pos-right;
   z-index: 1;
+  top: $button-burger-pos-top;
+  // right: 100px;
+  right: $button-burger-pos-right;
 
-  margin-inline: auto;
-  background-color: rgba(0, 0, 0, 0.842);
-  // -----------------------
-  width: $button-burger-line-width;
-  transform: scaleY(0);
-  opacity: 0;
-  transform-origin: top right;
-  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out, opacity 0.3s ease-in-out;
-
+  //------------------------------------------------
   ul {
-    @include flex-modulable(column, center, null, 3rem);
-
-    margin: 4rem 0;
-
-    font-size: $font-size-navbar;
     font-family: $font-molot;
     letter-spacing: $font-letter-spacing-navbar;
     color: $color-font-navbar;
   }
 }
 //------------------------------------------------
-// JS CLASS
+.menu-general-a {
+  @include flex-modulable(null, right, null);
+  position: absolute;
+  top: 0;
+  right: 0;
 
-.js-navbarOpen {
-  transform: scaleY(1);
-  width: 75%;
-  opacity: 1;
+  width: $button-burger-line-width;
+  height: $button-burger-line-height;
+
+  font-size: 0;
+
+  transition: all .2s;
+
+  &:hover {
+    right: 10px;
+    transition: all 0.15s;
+  }
+}
+.menu-pos0 {
+  top: 12px;
+  background-color: white;
+}
+.menu-pos1 {
+  top: 12px;
+  background-color: white;
+}
+.menu-pos2 {
+  top: 12px;
+  background-color: white;
+}
+.menu-pos3 {
+  top: 12px;
+  background-color: white;
 }
 
+//------------------------------------------------
+//------------------------------------------------
+//------------------------------------------------
+// JS CLASS ONCLICK
+
+
+.js-menu-open {
+  height: $navbar-li-height;
+  width: $navbar-li-width;
+
+  font-size: $font-size-navbar;
+  padding: 5px 20px 0 0;
+
+  transition: font-size 0.2s 0.8s;
+}
+
+.js-menu-open-pos0 {
+  top: calc($button-burger-pos-top + $navbar-pos-offset);
+  background-color: rgba(22, 166, 202);
+
+
+  transition: all $transition-navbar-open .35s, right 0.15s;
+}
+.js-menu-open-pos1 {
+  top: calc($button-burger-pos-top + $navbar-pos-offset + ($navbar-li-height));
+  background-color: rgb(23, 116, 139);
+
+  transition: all $transition-navbar-open .25s, right 0.15s;
+}
+.js-menu-open-pos2 {
+  top: calc($button-burger-pos-top + $navbar-pos-offset + ($navbar-li-height * 2));
+  background-color: rgb(173, 127, 80);
+
+  transition: all $transition-navbar-open .15s, right 0.15s;
+}
+.js-menu-open-pos3 {
+  top: calc($button-burger-pos-top + $navbar-pos-offset + ($navbar-li-height * 3));
+  background-color: rgb(109, 50, 43);
+  height: 120px;
+
+  transition: all $transition-navbar-open calc(.1s), right 0.15s;
+}
+
+@for $i from 0 through 3 {
+  .js-menu-open-pos#{$i} {
+    box-shadow: -0.8rem 0.8rem 5px 0 $shadow-color-shadow-navbar;
+  }
+}
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//------------------------------------------------
+//------------------------------------------------
 //------------------------------------------------
 // MEDIA
 @media only screen and (min-width: 1024px) {
@@ -56,12 +138,14 @@ nav {
     }
   }
 }
-// ______________________________________
+//------------------------------------------------
+//------------------------------------------------
+//------------------------------------------------
 // used if browser support the setting, yet firefox seem to support it
 // but still doesnt display the blur.
-@supports (backdrop-filter: blur(6px)) {
-  nav {
-    background-color: rgba(0, 0, 0, 0.651);
-    backdrop-filter: blur(6px);
-  }
-}
+// @supports (backdrop-filter: blur(6px)) {
+//   nav {
+//     background-color: rgba(0, 0, 0, 0.651);
+//     backdrop-filter: blur(6px);
+//   }
+// }

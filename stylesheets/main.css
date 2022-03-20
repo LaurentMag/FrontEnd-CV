@@ -517,37 +517,101 @@ body {
 }
 
 nav {
-  display: flex;
-  justify-content: center;
-  gap: 0;
   position: fixed;
-  top: 35px;
-  right: 25px;
   z-index: 1;
-  margin-inline: auto;
-  background-color: rgba(0, 0, 0, 0.842);
-  width: 2.3rem;
-  transform: scaleY(0);
-  opacity: 0;
-  transform-origin: top right;
-  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  top: 25px;
+  right: 25px;
 }
 nav ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 3rem;
-  margin: 4rem 0;
-  font-size: 1.5rem;
   font-family: "Molot", sans-serif;
   letter-spacing: 0.08rem;
   color: #e7e2e2;
 }
 
-.js-navbarOpen {
-  transform: scaleY(1);
-  width: 75%;
-  opacity: 1;
+.menu-general-a {
+  display: flex;
+  justify-content: right;
+  gap: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.2rem;
+  height: 0.3rem;
+  font-size: 0;
+  transition: all 0.2s;
+}
+.menu-general-a:hover {
+  right: 10px;
+  transition: all 0.15s;
+}
+
+.menu-pos0 {
+  top: 12px;
+  background-color: white;
+}
+
+.menu-pos1 {
+  top: 12px;
+  background-color: white;
+}
+
+.menu-pos2 {
+  top: 12px;
+  background-color: white;
+}
+
+.menu-pos3 {
+  top: 12px;
+  background-color: white;
+}
+
+.js-menu-open {
+  height: 60px;
+  width: 240px;
+  font-size: 1.5rem;
+  padding: 5px 20px 0 0;
+  transition: font-size 0.2s 0.8s;
+}
+
+.js-menu-open-pos0 {
+  top: 55px;
+  background-color: #16a6ca;
+  transition: all 0.5s 0.35s, right 0.15s;
+}
+
+.js-menu-open-pos1 {
+  top: 115px;
+  background-color: #17748b;
+  transition: all 0.5s 0.25s, right 0.15s;
+}
+
+.js-menu-open-pos2 {
+  top: 175px;
+  background-color: #ad7f50;
+  transition: all 0.5s 0.15s, right 0.15s;
+}
+
+.js-menu-open-pos3 {
+  top: 235px;
+  background-color: #6d322b;
+  height: 120px;
+  transition: all 0.5s 0.1s, right 0.15s;
+}
+
+.js-menu-open-pos0 {
+  box-shadow: -0.8rem 0.8rem 5px 0 rgba(27, 23, 23, 0.082);
+}
+
+.js-menu-open-pos1 {
+  box-shadow: -0.8rem 0.8rem 5px 0 rgba(27, 23, 23, 0.082);
+}
+
+.js-menu-open-pos2 {
+  box-shadow: -0.8rem 0.8rem 5px 0 rgba(27, 23, 23, 0.082);
+}
+
+.js-menu-open-pos3 {
+  box-shadow: -0.8rem 0.8rem 5px 0 rgba(27, 23, 23, 0.082);
 }
 
 @media only screen and (min-width: 1024px) {
@@ -565,19 +629,13 @@ nav ul {
     padding-bottom: 0;
   }
 }
-@supports ((-webkit-backdrop-filter: blur(6px)) or (backdrop-filter: blur(6px))) {
-  nav {
-    background-color: rgba(0, 0, 0, 0.651);
-    -webkit-backdrop-filter: blur(6px);
-            backdrop-filter: blur(6px);
-  }
-}
 .button-general {
   cursor: pointer;
   text-decoration: none;
   border: none;
   padding: 1rem;
   width: 6rem;
+  box-shadow: -0.3rem 0.3rem 4px 0 rgba(27, 23, 23, 0.151);
   transition: 0.2s ease-in-out;
 }
 
@@ -606,7 +664,7 @@ nav ul {
   top: 25px;
   right: 25px;
   height: 0.3rem;
-  width: 2.3rem;
+  width: 2.2rem;
   padding: 12px 0;
   cursor: pointer;
   background-color: white;
@@ -636,14 +694,14 @@ nav ul {
   background-color: transparent;
 }
 .js-burgerButtonChange::before, .js-burgerButtonChange::after {
-  transition: top 0.1s ease-in 0s, transform 0.1s ease-in 0.2s;
+  transition: top 0.1s ease-in 0s, transform 0.1s ease-in 0.5s;
   top: 50%;
 }
 .js-burgerButtonChange::before {
-  transform: rotate(-45deg) scale(1.2);
+  transform: rotate(-45deg);
 }
 .js-burgerButtonChange::after {
-  transform: rotate(45deg) scale(1.2);
+  transform: rotate(45deg);
 }
 
 .flex-container {
