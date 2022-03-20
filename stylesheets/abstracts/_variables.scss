@@ -73,21 +73,21 @@ $font-size-navbar: 1.5rem;
 $font-size-parallax-title: 4rem;
 
 $font-size-h2: 2rem;
-$font-size-h3: 1.5rem;
-$font-size-p: 1.1rem;
+$font-size-h3: 1.8rem;
+$font-size-p: 1.25rem;
 
 $font-letter-spacing-navbar: 0.08rem;
 $font-letter-spacing-h2: 0.03rem;
 
 $font-line-height-h3: 0.2rem;
+$font-line-height-p: 1.8rem;
+
 
 //------------------------------------------------
 $color-font-navbar: rgb(231, 226, 226);
 $color-font-parallax-title: white;
 
 $color-background-gray: rgb(175, 179, 182);
-// $color-background-gray: rgb(202, 200, 194);
-
 $color-blue-from-bokeh: rgb(13, 140, 172);
 
 //------------------------------------------------
@@ -95,16 +95,30 @@ $shadow-color-shadow-light: rgba(27, 23, 23, 0.151);
 $shadow-color-shadow-navbar: rgba(27, 23, 23, 0.082);
 $shadow-color-orange: rgb(190, 120, 50);
 
+
+//------------------------------------------------
 //------------------------------------------------
 // BURGER BUTTON NAVBAR
 $button-burger-pos-top: 25px;
 $button-burger-pos-right: 25px;
 
-$button-burger-line-height: 0.3rem;
 $button-burger-line-width: 2.2rem;
-$button-burger-before-after-distance: 0.7rem;
 $button-burger-background-color: white;
-$button-burger-background-color-transparent: rgba(255, 255, 255, 0);
 
 $button-burger-transition-time: 0.1s;
+//------------------------------------------------
+//OLD BURGER
+$button-burger-line-height: 0.3rem;
 $button-burger-transition-delay: 0.2s;
+
+//------------------------------------------------
+// NAVBAR
+$navbar-pos-offset: 30px;
+$navbar-li-height: 75px;
+$navbar-li-width: 300px;
+
+$transition-navbar-open: 0.4s;
+$transition-navbar-close: 0.15s;
+$transition-navbar-a-apparition-later-delay: 0.35s;
+$transition-font-size-duration: .4s;
+$transition-font-size-delay: .5s;

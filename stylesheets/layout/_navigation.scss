@@ -1,15 +1,9 @@
-$navbar-pos-offset: 30px;
-$navbar-li-height: 60px;
-$navbar-li-width: 240px;
-
-$transition-navbar-open: 0.5s;
-
 nav {
   position: fixed;
   z-index: 1;
   top: $button-burger-pos-top;
-  // right: 100px;
   right: $button-burger-pos-right;
+  // right: 100px;
 
   //------------------------------------------------
   ul {
@@ -20,7 +14,7 @@ nav {
 }
 //------------------------------------------------
 .menu-general-a {
-  @include flex-modulable(null, right, null);
+  @include flex-modulable(null, flex-end, null);
   position: absolute;
   top: 0;
   right: 0;
@@ -28,17 +22,13 @@ nav {
   width: $button-burger-line-width;
   height: $button-burger-line-height;
 
-  font-size: 0;
-
-  transition: all .2s;
-
-  &:hover {
-    right: 10px;
-    transition: all 0.15s;
-  }
+  // transition when closing
+  transition: background $transition-navbar-close, top $transition-navbar-close, width $transition-navbar-close,
+    height $transition-navbar-close, font-size 0.1s;
 }
+
 .menu-pos0 {
-  top: 12px;
+  top: 0;
   background-color: white;
 }
 .menu-pos1 {
@@ -46,12 +36,28 @@ nav {
   background-color: white;
 }
 .menu-pos2 {
-  top: 12px;
+  top: 24px;
   background-color: white;
 }
 .menu-pos3 {
-  top: 12px;
+  top: 24px;
   background-color: white;
+}
+
+// apply to all <a
+@for $i from 0 through 3 {
+  .menu-pos#{$i} {
+    font-size: 0;
+
+    &:hover {
+      right: 15px;
+      // for some reasons need to setup all transition again on the over
+      // otherwise only the "move left" animation is took into account ( if that's the only one setup )
+      // and it cut all others animations !?
+      transition: background $transition-navbar-close, top $transition-navbar-close, width $transition-navbar-close,
+        height $transition-navbar-close, font-size 0.2s ease-in, right 0.2s;
+    }
+  }
 }
 
 //------------------------------------------------
@@ -59,66 +65,44 @@ nav {
 //------------------------------------------------
 // JS CLASS ONCLICK
 
-
 .js-menu-open {
   height: $navbar-li-height;
   width: $navbar-li-width;
-
-  font-size: $font-size-navbar;
   padding: 5px 20px 0 0;
-
-  transition: font-size 0.2s 0.8s;
 }
 
 .js-menu-open-pos0 {
-  top: calc($button-burger-pos-top + $navbar-pos-offset);
-  background-color: rgba(22, 166, 202);
-
-
-  transition: all $transition-navbar-open .35s, right 0.15s;
+  background-color: rgba(22, 166, 202, 0.95);
 }
 .js-menu-open-pos1 {
-  top: calc($button-burger-pos-top + $navbar-pos-offset + ($navbar-li-height));
-  background-color: rgb(23, 116, 139);
-
-  transition: all $transition-navbar-open .25s, right 0.15s;
+  background-color: rgb(23, 116, 139, 0.95);
 }
 .js-menu-open-pos2 {
-  top: calc($button-burger-pos-top + $navbar-pos-offset + ($navbar-li-height * 2));
-  background-color: rgb(173, 127, 80);
-
-  transition: all $transition-navbar-open .15s, right 0.15s;
+  background-color: rgb(173, 127, 80, 0.95);
 }
 .js-menu-open-pos3 {
-  top: calc($button-burger-pos-top + $navbar-pos-offset + ($navbar-li-height * 3));
-  background-color: rgb(109, 50, 43);
-  height: 120px;
-
-  transition: all $transition-navbar-open calc(.1s), right 0.15s;
+  background-color: rgb(109, 50, 43, 0.95);
+  height: 140px;
 }
-
+// apply to all <a
 @for $i from 0 through 3 {
   .js-menu-open-pos#{$i} {
+    font-size: $font-size-navbar;
+    top: calc($button-burger-pos-top + $navbar-pos-offset + (($navbar-li-height * $i)));
     box-shadow: -0.8rem 0.8rem 5px 0 $shadow-color-shadow-navbar;
+
+    // transition when opening
+    transition: background
+        $transition-navbar-open
+        ease-out
+        calc($transition-navbar-a-apparition-later-delay - ($i * 0.1s)),
+      top $transition-navbar-open ease-out calc($transition-navbar-a-apparition-later-delay - ($i * 0.1s)),
+      height $transition-navbar-open ease-out calc($transition-navbar-a-apparition-later-delay - ($i * 0.1s)),
+      width $transition-navbar-open ease-out calc($transition-navbar-a-apparition-later-delay - ($i * 0.1s)),
+      font-size $transition-font-size-duration $transition-font-size-delay, right 0.2s;
   }
 }
 
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //------------------------------------------------
 //------------------------------------------------
 //------------------------------------------------

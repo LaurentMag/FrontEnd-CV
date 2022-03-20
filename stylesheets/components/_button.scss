@@ -9,8 +9,11 @@
   text-decoration: none;
 
   border: none;
-  padding: 1rem;
-  width: 6rem;
+  padding: 1.5rem;
+  width: 9rem;
+
+  font-weight: 600;
+  font-size: 1rem;
 
   box-shadow: -0.3rem 0.3rem 4px 0 $shadow-color-shadow-light;
 
@@ -23,7 +26,7 @@
 }
 
 .aboutme__button-work:hover {
-  box-shadow: -1.5rem 0.5rem 0 rgba(66, 66, 66, 0.445);
+  box-shadow: -0.3rem 0.5rem 0 rgba(66, 66, 66, 0.445);
   transform: translate(0, -5%);
 }
 .aboutme__button-work:active {
@@ -31,68 +34,50 @@
 }
 
 .aboutme__button-contact:hover {
-  box-shadow: 1.5rem 0.5rem 0 rgba(58, 56, 56, 0.445);
+  // box-shadow: 1.5rem 0.5rem 0 rgba(58, 56, 56, 0.445);
+  // transform: translate(0, -5%);
+  box-shadow: -0.3rem 0.5rem 0 rgba(66, 66, 66, 0.445);
   transform: translate(0, -5%);
 }
 
 // ----------------------------------------------------------------
 // ----------------------------------------------------------------
 // ----------------------------------------------------------------
-// burger button
-
 .burger-button {
   z-index: 10;
 
   position: fixed;
   top: $button-burger-pos-top;
   right: $button-burger-pos-right;
-
-  height: $button-burger-line-height;
-  width: $button-burger-line-width;
-  padding: 12px 0;
-
+  padding: 17px calc($button-burger-line-width / 2);
   cursor: pointer;
-  background-color: $button-burger-background-color;
-  background-clip: content-box;
-  box-sizing: content-box;
-
-  transition: background 50ms ease-in-out $button-burger-transition-delay;
 
   &::before,
   &::after {
     z-index: 3;
     content: "";
     position: absolute;
-    top: 0;
+    top: 12px;
     left: 0;
+
     height: $button-burger-line-height;
     width: 100%;
-    background-color: $button-burger-background-color;
 
-    transition: top $button-burger-transition-time ease-in $button-burger-transition-delay,
-      transform $button-burger-transition-time ease-in 0s;
-  }
-  &::before {
-    top: 0;
-  }
-  &::after {
-    top: 83%;
+    background-color: transparent;
+
+    transition: transform $button-burger-transition-time ease-in 0s, background .1s ease .1s;
   }
 }
-
 //------------------------------------------------
 //------------------------------------------------
 //------------------------------------------------
 // JS CLASS
 
 .js-burgerButtonChange {
-  background-color: transparent;
-
   &::before,
   &::after {
-    transition: top $button-burger-transition-time ease-in 0s,
-      transform $button-burger-transition-time ease-in .5s;
-    top: 50%;
+    background-color: $button-burger-background-color;
+    transition: transform $button-burger-transition-time ease-in 0.45s, background .1s ease-in-out .4s;
   }
 
   &::before {
@@ -102,3 +87,70 @@
     transform: rotate(45deg);
   }
 }
+
+
+
+// OLD ==================================================
+// .burger-button {
+//   z-index: 10;
+
+//   position: fixed;
+//   top: $button-burger-pos-top;
+//   right: $button-burger-pos-right;
+
+//   height: $button-burger-line-height;
+//   width: $button-burger-line-width;
+//   padding: 12px 0;
+
+//   cursor: pointer;
+//   background-color: $button-burger-background-color;
+//   background-clip: content-box;
+//   box-sizing: content-box;
+
+//   transition: background 50ms ease-in-out $button-burger-transition-delay;
+
+//   &::before,
+//   &::after {
+//     z-index: 3;
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     height: $button-burger-line-height;
+//     width: 100%;
+//     background-color: $button-burger-background-color;
+
+//     transition: top $button-burger-transition-time ease-in $button-burger-transition-delay,
+//       transform $button-burger-transition-time ease-in 0s;
+//   }
+//   &::before {
+//     top: 0;
+//   }
+//   &::after {
+//     top: 83%;
+//   }
+// }
+
+// //------------------------------------------------
+// //------------------------------------------------
+// //------------------------------------------------
+// // JS CLASS
+
+// .js-burgerButtonChange {
+//   background-color: transparent;
+
+//   &::before,
+//   &::after {
+//     transition: top $button-burger-transition-time ease-in 0s, transform $button-burger-transition-time ease-in 0.45s;
+//     top: 50%;
+//   }
+
+//   &::before {
+//     transform: rotate(-45deg);
+//   }
+//   &::after {
+//     transform: rotate(45deg);
+//   }
+// }
+
+

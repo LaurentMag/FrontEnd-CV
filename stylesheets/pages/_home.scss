@@ -41,17 +41,12 @@
   transform: translateZ(-7px) scale(1.2);
 }
 
-// About me ========================================================================================
+// ABOUT ME ========================================================================================
 // =================================================================================================
 
-main {
-  background-color: $color-background-gray;
-}
-
-// ----------------------------------------------------------------
-
 .container-aboutme {
-  margin-inline: 1rem;
+  // margin-inline: 1rem;
+  background-color: $color-background-gray;
 
   .aboutme {
     isolation: isolate;
@@ -73,7 +68,7 @@ main {
 
     figure {
       position: relative;
-      margin: 1rem 2rem;
+      margin: 3rem 2rem;
       grid-row: 3 / 4;
       justify-self: end;
       max-width: 45%;
@@ -94,10 +89,8 @@ main {
     // ----------------------------------------------------------------
 
     .aboutme__container-buttons {
-      justify-self: center;
-
-      display: flex;
-      gap: 2rem;
+      @include flex-modulable(null, center, null, 4rem);
+      margin: 2rem 0;
     }
 
     img {
@@ -107,6 +100,53 @@ main {
   }
 }
 
+// PORTFOLIO ========================================================================================
+// =================================================================================================
+
+.portfolior__container {
+  max-width: 90%;
+  margin-inline: auto;
+  
+  h2 {
+    margin: 2rem 0 2rem $margin-about-me-left-h2;
+  }
+}
+
+.portfolio__grid {
+  @include grid-column(1fr, null, 4rem);
+}
+
+.portfolio__article-descriptif {
+  display: grid;
+  justify-items: center;
+
+  h3 {
+    margin: 1rem 0;
+  }
+
+  .project__tech-general {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10%;
+    
+    margin: 1rem 0;
+
+    li {
+      font-size: 0.8rem;
+      padding: 0.5rem 1.3rem;
+      border: 1px solid gray;
+      border-radius: 0.4rem;
+    }
+  }
+  
+  p {
+    max-width: 70%;
+    margin: 1rem 0;
+  }
+}
+
+// TEMP ========================================================================================
+// =================================================================================================
 .tempcontent {
   background-color: rgb(109, 103, 103);
   color: white;
