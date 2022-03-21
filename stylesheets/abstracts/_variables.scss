@@ -59,6 +59,8 @@ $margin-nav-left: 40%;
 $margin-about-me-left-h2: 0.5rem;
 $margin-about-me-left-h3-multiplier: 1.6;
 
+$margin-h2-top-left-bottom-right: 1rem 0 4rem $margin-about-me-left-h2;
+
 //------------------------------------------------
 // FONT
 
@@ -71,6 +73,7 @@ $font-size-parallax-title: 4rem;
 
 $font-size-h2: 4rem;
 $font-size-h3: 2rem;
+$font-size-h4: 1.5rem;
 $font-size-p: 1.25rem;
 
 $font-letter-spacing-navbar: 0.08rem;
@@ -82,12 +85,16 @@ $font-line-height-p: 1.95rem;
 //------------------------------------------------
 $color-font-navbar: rgb(231, 226, 226);
 $color-font-parallax-title: white;
-$color-font-portfolio-modal: rgb(44, 43, 43);
-$color-font-portfolio-modal-tech: rgb(65, 63, 63);
+$color-font-portfolio-modal: rgb(214, 217, 219);
+$color-font-portfolio-modal-tech: rgb(194, 210, 223);
 
 $color-background-main: rgb(76, 80, 83);
 $color-background-portfolio: rgb(76, 80, 83);
-$color-background-portfolio-modal: rgba(218, 216, 213, 0.95);
+$color-background-parcours: rgb(76, 80, 83);
+$color-background-portfolio-modal: rgba(48,58,60, 0.95);
+
+$color-background-parcour-article: rgb(158, 162, 180);
+$color-background-parcour-timeline-trail: rgb(61, 57, 57);
 
 $color-blue-from-bokeh: rgb(13, 140, 172);
 

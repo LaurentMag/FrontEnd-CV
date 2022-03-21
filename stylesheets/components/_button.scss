@@ -20,16 +20,16 @@
   transition: 0.2s ease-in-out;
 }
 
-.aboutme__button-work {
+.aboutme__button-cv {
   background-color: $shadow-color-aboutme;
   color: white;
 }
 
-.aboutme__button-work:hover {
+.aboutme__button-cv:hover {
   box-shadow: -0.3rem 0.5rem 0 rgba(66, 66, 66, 0.445);
   transform: translate(0, -5%);
 }
-.aboutme__button-work:active {
+.aboutme__button-cv:active {
   background-color: rgb(7, 82, 100);
 }
 
@@ -95,14 +95,14 @@
 
 .portfolio__article-arrow {
   position: relative;
-  width: 40px;
+  width: 100px;
   height: 40px;
   
   &:before,
   &:after {
     content: "";
     position: absolute;
-    left: 23%;
+    left: 40%;
     top: 30%;
     
     width: 0.3rem;
@@ -113,7 +113,7 @@
   }
   &:after {
     transform: rotate(135deg);
-    left: 63%;
+    left: 55%;
   }
 
   &:hover {

@@ -1,0 +1,135 @@
+.parcour-background {
+  background-color: $color-background-parcours;
+  color: white;
+}
+
+.parcours__container {
+  max-width: 90%;
+  margin: 12rem auto 0 auto;
+  padding-bottom: 12rem;
+  h2 {
+    margin: $margin-h2-top-left-bottom-right;
+  }
+}
+// ------------------------------------------------
+.parcours__article {
+  display: grid;
+  max-width: 90%;
+  margin: 4rem 0;
+  padding: 3rem;
+  border-radius: 0.5rem;
+  background-color: $color-background-parcour-article;
+
+  h3 {
+    font-size: calc($font-size-h3 * 1.2);
+    font-weight: 700;
+  }
+
+  ul {
+    margin-inline: 2rem;
+    li {
+      list-style: square;
+    }
+  }
+}
+
+// =================================================================================================
+// =================================================================================================
+// MEDIA
+
+@media only screen and (min-width: 880px) {
+  .parcours-grid {
+    @include grid-column(repeat(2, 1fr));
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+
+      background-color: $color-background-parcour-timeline-trail;
+      width: 0.25rem;
+      height: 100%;
+    }
+  }
+  // ------------------------------------------------
+  .parcours__article {
+    position: relative;
+    width: 80%;
+    margin: 0 0;
+  }
+
+  // ------------------------------------------------
+
+  $parcours-circle-left-pos: -29%;
+  $parcours-circle-right-pos: -25%;
+
+  $parcours-triangle-right-pos: -3rem;
+  $parcours-triangle-circle-top-pos: 70%;
+
+  .parcours__article-left {
+    align-self: start;
+    margin-top: -3rem;
+
+    // CIRCLE
+    &::before {
+      content: "";
+      position: absolute;
+      top: $parcours-triangle-circle-top-pos;
+      right: $parcours-circle-left-pos;
+
+      width: 1.3rem;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+
+      background-color: $color-background-parcour-timeline-trail;
+    }
+
+    // TRIANGLE
+    &::after {
+      content: "";
+      position: absolute;
+      top: $parcours-triangle-circle-top-pos;
+      right: $parcours-triangle-right-pos;
+      transform: translate(0, -50%);
+
+      border: 1.5rem solid transparent;
+      border-left-color: $color-background-parcour-article;
+    }
+  }
+
+  // ------------------------------------------------
+  .parcours__article-right {
+    justify-self: end;
+    margin-top: 20rem;
+
+    // CIRCLE
+    &::before {
+      content: "";
+      position: absolute;
+      top: $parcours-triangle-circle-top-pos;
+      left: $parcours-circle-right-pos;
+
+      width: 1.3rem;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+
+      background-color: $color-background-parcour-timeline-trail;
+    }
+    // TRIANGLE
+    &::after {
+      content: "";
+      position: absolute;
+      top: $parcours-triangle-circle-top-pos;
+      left: $parcours-triangle-right-pos;
+      transform: translate(0, -50%);
+
+      border: 1.5rem solid transparent;
+      border-right-color: $color-background-parcour-article;
+    }
+  }
+}

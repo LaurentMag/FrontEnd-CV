@@ -106,9 +106,16 @@ a:active {
   font-weight: 600;
 }
 
+.general-h4 {
+  font-family: $font-smooth-sans;
+  font-size: $font-size-h4;
+  letter-spacing: $font-letter-spacing-h2;
+  font-weight: 500;
+}
+
 .general-p {
   font-family: $font-smooth-sans;
   font-size: $font-size-p;
-  font-weight: 500;
+  font-weight: 600;
   line-height: $font-line-height-p;
 }

@@ -13,26 +13,23 @@ html {
   isolation: isolate;
 
   max-width: 90%;
-  margin-inline: auto;
+  margin: 12rem auto 0 auto;
 
   h2 {
-    margin: 2rem 0 2rem calc($margin-about-me-left-h2 * 20);
+    margin: $margin-h2-top-left-bottom-right;
   }
 }
 // ------------------------------------------------
 .portfolio__grid {
   @include grid-column(1fr, null, 4rem);
 }
-
 // ------------------------------------------------
 .portfolio__article {
   position: relative;
   display: grid;
-  overflow: hidden;
 
-  padding: 10px;
-  background-color: white;
-  box-shadow: 0 0.5rem 9px $shadow-color-shadow-light;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 30px 10px rgba(0, 0, 0, 0.24);
 
   > * {
     grid-column: 1 / 2;
@@ -40,6 +37,7 @@ html {
   }
 
   figure {
+    border-radius: 0.2rem 0.2rem 0 0;
     overflow: hidden;
     img {
       aspect-ratio: 1 / 1.1;
@@ -52,17 +50,22 @@ html {
   display: grid;
   justify-items: center;
   grid-auto-rows: max-content;
+
   position: absolute;
   bottom: 0;
   left: 0;
   overflow: hidden;
+
   width: 100%;
   height: 95px;
+
   transition: 0.5s ease;
 
   background-color: $color-background-portfolio-modal;
   backdrop-filter: blur(6px);
   color: $color-font-portfolio-modal;
+
+  border-radius: 0 0 0.2rem 0.2rem;
 
   transition: height 0.5s ease-in-out;
 

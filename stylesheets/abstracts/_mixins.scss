@@ -36,7 +36,7 @@
 // ----------------------------------------------------------------
 
 /* GRIDS */
-@mixin grid-column($value, $column-gap: null, $row-gap: null) {
+@mixin grid-column($value: null, $column-gap: null, $row-gap: null) {
   display: grid;
   grid-template-columns: $value;
   column-gap: $column-gap;
@@ -51,4 +51,21 @@
   justify-content: $justify;
   align-items: $align;
   gap: $gap;
+}
+
+/* TRIANGLE */
+@mixin triangle($size, $size2, $side, $top: 0, $left: 0, $color: black) {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: $top;
+    left: $left;
+    z-index: -1;
+
+    border: $size $size2 solid transparent;
+    border-#{$side}-color: $color;
+
+  }
 }

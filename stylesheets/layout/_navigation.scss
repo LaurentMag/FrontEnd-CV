@@ -5,6 +5,7 @@ nav {
   right: $button-burger-pos-right;
   // right: 100px;
 
+
   //------------------------------------------------
   ul {
     font-family: $font-molot;
@@ -102,6 +103,11 @@ nav {
       font-size $transition-font-size-duration $transition-font-size-delay, right 0.2s;
   }
 }
+
+// .background-color {
+//   padding: 100vh 100vw;
+//   background-color: rgba(196, 193, 193, 0.692);
+// }
 
 //------------------------------------------------
 //------------------------------------------------
