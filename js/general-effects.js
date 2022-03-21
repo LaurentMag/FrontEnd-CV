@@ -9,8 +9,7 @@ for (let button of portfolioModalButtonS) {
 }
 
 function funcModalMove(funcParam) {
-    funcParam.stopPropagation();
-    funcParam.preventDefault();
+
   let whichButton = funcParam.target;
   let buttonIndex = Array.prototype.indexOf.call(portfolioModalButtonS, whichButton);
   //Array.prototype.indexOf.call(portfolioModalButtonS, whichButton)
@@ -21,7 +20,6 @@ function funcModalMove(funcParam) {
   whichButton.classList.toggle("js-arrow-activate");
   portfolioModal[buttonIndex].classList.toggle("js-activate-descriptif");
 }
-
 
 
 

@@ -2,15 +2,13 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-
 /// Regular font family
 /// @type List
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-stack: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
-
+$code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Monaco", monospace !default;
 
 /// Copy text color
 /// @type Color
@@ -32,7 +30,6 @@ $mid-grey: rgb(153, 153, 153) !default;
 /// @type Color
 $dark-grey: rgb(68, 68, 68) !default;
 
-
 /// Container's maximum width
 /// @type Length
 $max-width: 1180px !default;
@@ -41,39 +38,39 @@ $max-width: 1180px !default;
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
+  "small": 320px,
+  "medium": 768px,
+  "large": 1024px,
 ) !default;
 
 /// Relative or absolute URL where all assets are served from
 /// @type String
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
-$base-url: '/assets/' !default;
+$base-url: "/assets/" !default;
 //------------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------
 
 //------------------------------------------------
-$margin-nav-left:40%;
+$margin-nav-left: 40%;
 
-$margin-about-me-left-h2: 1.5rem;
+$margin-about-me-left-h2: 0.5rem;
 $margin-about-me-left-h3-multiplier: 1.6;
 
 //------------------------------------------------
 // FONT
 
 $font-molot: "Molot", sans-serif;
-$font-smooth-sans: 'Smooch Sans', sans-serif;
+$font-smooth-sans: "Smooch Sans", sans-serif;
 
 //------------------------------------------------
 $font-size-navbar: 1.5rem;
 $font-size-parallax-title: 4rem;
 
-$font-size-h2: 2rem;
-$font-size-h3: 1.8rem;
+$font-size-h2: 4rem;
+$font-size-h3: 2rem;
 $font-size-p: 1.25rem;
 
 $font-letter-spacing-navbar: 0.08rem;
@@ -82,27 +79,29 @@ $font-letter-spacing-h2: 0.03rem;
 $font-line-height-h3: 0.2rem;
 $font-line-height-p: 1.95rem;
 
-
 //------------------------------------------------
 $color-font-navbar: rgb(231, 226, 226);
 $color-font-parallax-title: white;
+$color-font-portfolio-modal: rgb(44, 43, 43);
+$color-font-portfolio-modal-tech: rgb(65, 63, 63);
 
-$color-background-gray: rgb(175, 179, 182);
+$color-background-main: rgb(76, 80, 83);
+$color-background-portfolio: rgb(76, 80, 83);
+$color-background-portfolio-modal: rgba(218, 216, 213, 0.95);
+
 $color-blue-from-bokeh: rgb(13, 140, 172);
-
-$color-project-font-border-tech: rgb(206, 204, 204);
 
 //------------------------------------------------
 $shadow-color-shadow-light: rgba(27, 23, 23, 0.151);
-$shadow-color-shadow-navbar: rgba(27, 23, 23, 0.082);
+$shadow-color-shadow-navbar: rgba(27, 23, 23, 0.308);
 $shadow-color-orange: rgb(190, 120, 50);
-
+$shadow-color-aboutme: rgb(82, 133, 175);
 
 //------------------------------------------------
 //------------------------------------------------
 // BURGER BUTTON NAVBAR
-$button-burger-pos-top: 25px;
-$button-burger-pos-right: 25px;
+$button-burger-pos-top: 5%;
+$button-burger-pos-right: 5%;
 
 $button-burger-line-width: 2.2rem;
 $button-burger-background-color: white;
@@ -115,12 +114,12 @@ $button-burger-transition-delay: 0.2s;
 
 //------------------------------------------------
 // NAVBAR
-$navbar-pos-offset: 30px;
+$navbar-pos-offset: 40px;
 $navbar-li-height: 75px;
 $navbar-li-width: 300px;
 
 $transition-navbar-open: 0.4s;
 $transition-navbar-close: 0.15s;
 $transition-navbar-a-apparition-later-delay: 0.35s;
-$transition-font-size-duration: .4s;
-$transition-font-size-delay: .5s;
+$transition-font-size-duration: 0.4s;
+$transition-font-size-delay: 0.5s;

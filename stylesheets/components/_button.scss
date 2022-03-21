@@ -21,7 +21,7 @@
 }
 
 .aboutme__button-work {
-  background-color: $color-blue-from-bokeh;
+  background-color: $shadow-color-aboutme;
   color: white;
 }
 
@@ -109,7 +109,7 @@
     height: 1.6rem;
     background: white;
     transform: rotate(-135deg);
-    transition: 0.3s transform;
+    transition: 0.5s transform;
   }
   &:after {
     transform: rotate(135deg);

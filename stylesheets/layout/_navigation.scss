@@ -72,16 +72,16 @@ nav {
 }
 
 .js-menu-open-pos0 {
-  background-color: rgba(22, 166, 202, 0.95);
+  background-color: rgba(104, 119, 146, 0.95);
 }
 .js-menu-open-pos1 {
-  background-color: rgb(23, 116, 139, 0.95);
+  background-color: rgba(99, 106, 119, 0.95);
 }
 .js-menu-open-pos2 {
-  background-color: rgb(173, 127, 80, 0.95);
+  background-color: rgba(84, 85, 88, 0.95);
 }
 .js-menu-open-pos3 {
-  background-color: rgb(109, 50, 43, 0.95);
+  background-color: rgba(45, 45, 46, 0.95);
   height: 140px;
 }
 // apply to all <a
@@ -89,7 +89,7 @@ nav {
   .js-menu-open-pos#{$i} {
     font-size: $font-size-navbar;
     top: calc($button-burger-pos-top + $navbar-pos-offset + (($navbar-li-height * $i)));
-    box-shadow: -0.8rem 0.8rem 5px 0 $shadow-color-shadow-navbar;
+    box-shadow: -0.8rem 0.8rem 10px 0 $shadow-color-shadow-navbar;
 
     // transition when opening
     transition: background
