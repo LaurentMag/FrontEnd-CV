@@ -5,7 +5,7 @@ const posArray = ["js-menu-open-pos0", "js-menu-open-pos1", "js-menu-open-pos2",
 const burgerChange = document.querySelector(".burger-button");
 const liList = document.querySelectorAll(".menu-general-a");
 
-burgerChange.addEventListener("click", function (e) {
+burgerChange.addEventListener("click", function(e) {
   e.stopPropagation();
   e.preventDefault();
   burgerChange.classList.toggle("js-burgerButtonChange");

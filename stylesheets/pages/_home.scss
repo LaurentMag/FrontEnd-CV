@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
 // PARALLAX ========================================================================================
 // =================================================================================================
 .body-hide-overflow {
@@ -41,12 +46,14 @@
   transform: translateZ(-7px) scale(1.2);
 }
 
+main {
+  background-color: $color-background-gray;
+}
+
 // ABOUT ME ========================================================================================
 // =================================================================================================
 
 .container-aboutme {
-  // margin-inline: 1rem;
-  background-color: $color-background-gray;
 
   .aboutme {
     isolation: isolate;
@@ -60,7 +67,7 @@
     h3 {
       margin-left: calc($margin-about-me-left-h2 * $margin-about-me-left-h3-multiplier);
       line-height: $font-line-height-h3;
-      margin-bottom: calc(1rem - $font-line-height-h3);
+      margin-top: 1rem;
     }
     p {
       margin: 1rem 2rem;
@@ -69,7 +76,7 @@
     figure {
       position: relative;
       margin: 3rem 2rem;
-      grid-row: 3 / 4;
+      grid-row: 2 / 3;
       justify-self: end;
       max-width: 45%;
 
@@ -85,11 +92,9 @@
         height: 100%;
       }
     }
-
     // ----------------------------------------------------------------
-
     .aboutme__container-buttons {
-      @include flex-modulable(null, center, null, 4rem);
+      @include flex-modulable(null, center, null, 20%);
       margin: 2rem 0;
     }
 
@@ -100,49 +105,174 @@
   }
 }
 
+.container-aboutme {
+  @media only screen and (min-width: 880px) {
+    max-width: 85%;
+    margin-inline: auto;
+
+    .aboutme {
+      @include grid-column(repeat(2, 1fr), 3rem, 3rem);
+      h3 {
+        margin-top: 1.3rem;
+      }
+
+      p {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }
+
+      figure {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        max-width: 60%;
+      }
+
+      .aboutme__container-buttons {
+        grid-column: 1 / 3;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1550px) {
+    max-width: 75%;
+  }
+}
+
 // PORTFOLIO ========================================================================================
 // =================================================================================================
-
+.portfolioBackground {
+  padding-top: 1rem;
+  background-color: rgb(218, 216, 213);
+}
 .portfolior__container {
+  isolation: isolate;
+
   max-width: 90%;
   margin-inline: auto;
-  
+
+  @media only screen and (min-width: 880px) {
+    max-width: 80%;
+  }
+  @media only screen and (min-width: 1280px) {
+    max-width: 90%;
+  }
+
   h2 {
     margin: 2rem 0 2rem $margin-about-me-left-h2;
   }
 }
-
+// ------------------------------------------------
 .portfolio__grid {
   @include grid-column(1fr, null, 4rem);
+
+  @media only screen and (min-width: 1280px) {
+    @include grid-column(repeat(2, 1fr), 5rem, 4rem);
+  }
 }
 
+// ------------------------------------------------
+.portfolio__article {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+
+  padding: 15px;
+  background-color: white;
+  box-shadow: -0.5rem 0.5rem 4px 8px $shadow-color-shadow-light;
+
+  > * {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  figure {
+    overflow: hidden;
+    img {
+      aspect-ratio: 1 / 0.6;
+      transition: transform .9s ease-in-out;
+
+      &:hover {
+        transform: scale(1.03) translate(2%, -15%);
+
+       
+
+      @media only screen and (min-width: 1280px) {
+        aspect-ratio: 1 / 0.8;
+        }
+      }
+    }
+  }
+}
+
+// ------------------------------------------------
 .portfolio__article-descriptif {
   display: grid;
   justify-items: center;
+  grid-auto-rows: max-content;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 90px;
+  transition: 0.5s ease;
+
+  background-color: rgb(23, 116, 139, 0.95);
+  border-radius: 1rem 1rem 0 0;
+  color: white;
+
+  transition: height 0.5s ease-in-out;
 
   h3 {
-    margin: 1rem 0;
+    margin: 0.5rem 0 1.3rem 0;
   }
-
   .project__tech-general {
     display: flex;
-    justify-content: space-evenly;
-    gap: 10%;
-    
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    width: 100%;
+
     margin: 1rem 0;
 
     li {
-      font-size: 0.8rem;
-      padding: 0.5rem 1.3rem;
-      border: 1px solid gray;
+      font-size: 0.9rem;
+      padding: 0.3rem 1.2rem;
+
+      color: $color-project-font-border-tech;
+      border: 1px solid $color-project-font-border-tech;
       border-radius: 0.4rem;
     }
   }
-  
   p {
-    max-width: 70%;
+    max-width: 85%;
     margin: 1rem 0;
   }
+}
+
+// ------------------------------------------------
+.portfolio__article-link-to-site {
+  margin: 2rem 0;
+  padding: 0.5rem 1.3rem;
+
+  font-family: $font-smooth-sans;
+  font-size: 1.1rem;
+  letter-spacing: $font-letter-spacing-h2;
+  text-transform: uppercase;
+  font-weight: 600;
+
+  color: rgb(7, 7, 7);
+  background-color: white;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 0.4rem;
+}
+
+//------------------------------------------------
+//------------------------------------------------
+//JS CLASS
+.js-activate-descriptif {
+  height: 90%;
+  transition: height 0.5s ease-in-out;
 }
 
 // TEMP ========================================================================================
@@ -156,4 +286,3 @@
 .contenttemp {
   padding: 2rem;
 }
-

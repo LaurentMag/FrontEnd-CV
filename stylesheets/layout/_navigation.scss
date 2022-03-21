@@ -107,21 +107,22 @@ nav {
 //------------------------------------------------
 //------------------------------------------------
 // MEDIA
-@media only screen and (min-width: 1024px) {
-  .nav-center {
-    nav {
-      margin-left: $margin-nav-left;
-      width: 60%;
-      background-color: rgba(255, 255, 255, 0);
-      ul {
-        @include flex-modulable(row, space-around, null, 3rem);
+// @media only screen and (min-width: 1024px) {
+//   .nav-center {
+//     nav {
+//       margin-left: $margin-nav-left;
+//       width: 60%;
+//       background-color: rgba(255, 255, 255, 0);
+//       ul {
+//         @include flex-modulable(row, space-around, null, 3rem);
 
-        margin-top: 0.5rem;
-        padding-bottom: 0;
-      }
-    }
-  }
-}
+//         margin-top: 0.5rem;
+//         padding-bottom: 0;
+//       }
+//     }
+//   }
+// }
+
 //------------------------------------------------
 //------------------------------------------------
 //------------------------------------------------

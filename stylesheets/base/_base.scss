@@ -30,7 +30,7 @@ a {
 
   @include on-event {
     color: $text-color;
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 
@@ -64,6 +64,10 @@ html {
 // ---------------------------------------------------------------------------
 
 a:hover {
+  text-decoration: none;
+}
+
+a:active {
   text-decoration: none;
 }
 

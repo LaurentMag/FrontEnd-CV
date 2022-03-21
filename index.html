@@ -33,10 +33,10 @@
   <nav class="mainNav">
     <ul>
       <li>
-        <a class="menu-general-a menu-pos0" href="#">ABOUT ME</a>
+        <a class="menu-general-a menu-pos0" href="#aboutme-id-link">ABOUT ME</a>
       </li>
       <li>
-        <a class="menu-general-a menu-pos1" href="#">PORTFOLIO</a>
+        <a class="menu-general-a menu-pos1" href="#portfolio-id-link">PORTFOLIO</a>
       </li>
       <li>
         <a class="menu-general-a menu-pos2" href="#">PARCOURS</a>
@@ -66,11 +66,13 @@
       <!-- ------------------------------------------------------------------ -->
       <div class="container-aboutme">
 
-        <section class="aboutme">
-          <h2 class="general-h2">
-            Laurent Magrez
-          </h2>
-          <h3 class="general-h3">Junior Web Développeur</h3>
+        <section id="aboutme-id-link" class="aboutme">
+          <div>
+            <h2 class="general-h2">
+              Laurent Magrez
+            </h2>
+            <h3 class="general-h3">Junior Web Développeur</h3>
+          </div>
           <p class="general-p testparagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Perferendis, dolorem dolor possimus debitis, optio unde harum corporis necessitatibus
             fugiat iste amet, eum maxime culpa atque ea laudantium at voluptatem obcaecati voluptate excepturi vitae.
@@ -100,21 +102,26 @@
       <!-- PORTFOLIO SECTION ------------------------------------------------ -->
       <!-- ------------------------------------------------------------------ -->
       <!-- ------------------------------------------------------------------ -->
-      <section class="portfolior__container">
-        <h2 class="general-h2">
-          Mes projets
-        </h2>
+      <div class="portfolioBackground">
 
-        <div class="portfolio__grid">
-          <!-- _______________________________________________ -->
-          
-            <article>
+        <section class="portfolior__container">
+          <h2 id="portfolio-id-link" class="general-h2">
+            Mes projets
+          </h2>
+
+          <div class="portfolio__grid">
+            <!-- _______________________________________________ -->
+
+
+            <article class="portfolio__article">
+
               <figure>
                 <img class="img-general-style" src="img/Project-BabyPic.png"
                   alt="Partie blog du project de site pour photographe bébé">
               </figure>
 
               <div class="portfolio__article-descriptif">
+                <div class="portfolio__article-arrow"></div>
                 <h3 class="general-h3">Baby pic Website</h3>
                 <ul class="project__tech-general">
                   <li>HTML</li>
@@ -129,18 +136,21 @@
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Ducimus sunt modi autem minus eos cumque.
                 </p>
+                <a class="portfolio__article-link-to-site" href="#"> Voir le site</a>
               </div>
             </article>
 
-          <!-- _______________________________________________ -->
-          
-            <article>
+
+            <!-- _______________________________________________ -->
+
+            <article class="portfolio__article">
               <figure>
                 <img class="img-general-style" src="img/project-streetMap.png"
                   alt="Site Map street art Lille, partie de la homepage">
               </figure>
 
               <div class="portfolio__article-descriptif">
+                <div class="portfolio__article-arrow"></div>
                 <h3 class="general-h3">StreetArt Lille</h3>
                 <ul class="project__tech-general">
                   <li>HTML</li>
@@ -155,18 +165,21 @@
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Ducimus sunt modi autem minus eos cumque.
                 </p>
+                <a class="portfolio__article-link-to-site" href="#"> Voir le site</a>
               </div>
             </article>
 
-          <!-- _______________________________________________ -->
-          
-            <article>
+
+            <!-- _______________________________________________ -->
+
+            <article class="portfolio__article">
               <figure>
                 <img class="img-general-style" src="img/Project-AnakaoExpress.png"
                   alt="Photo de la page trajet du site Anakao Express">
               </figure>
 
               <div class="portfolio__article-descriptif">
+                <div class="portfolio__article-arrow"></div>
                 <h3 class="general-h3">Anakao Express</h3>
                 <ul class="project__tech-general">
                   <li>HTML</li>
@@ -182,18 +195,21 @@
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Ducimus sunt modi autem minus eos cumque.
                 </p>
+                <a class="portfolio__article-link-to-site" href="#"> Voir le site</a>
               </div>
             </article>
 
-          <!-- _______________________________________________ -->
-          
-            <article>
+
+            <!-- _______________________________________________ -->
+
+            <article class="portfolio__article">
               <figure>
                 <img class="img-general-style" src="img/project-IOSProto.png"
                   alt="Prototype de l'application IOS réalisé lors de l'AFP">
               </figure>
 
               <div class="portfolio__article-descriptif">
+                <div class="portfolio__article-arrow"></div>
                 <h3 class="general-h3">Baby pic Website</h3>
                 <ul class="project__tech-general">
                   <li>SWIFT</li>
@@ -207,14 +223,15 @@
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Ducimus sunt modi autem minus eos cumque.
                 </p>
+                <a class="portfolio__article-link-to-site" href="#"> Voir le site</a>
               </div>
             </article>
 
 
-        </div>
-      </section>
+          </div>
+        </section>
 
-
+      </div>
 
       <!-- TEMP ------------------------------------------------ -->
       <!-- ------------------------------------------------------------------ -->
@@ -242,5 +259,6 @@
 
 
 <script type="text/javascript" src="js/navigation.js"></script>
+<script type="text/javascript" src="js/general-effects.js"></script>
 
 </html>
