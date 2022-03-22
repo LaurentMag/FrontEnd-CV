@@ -656,6 +656,30 @@ nav ul {
   transition: background 0.4s ease-out 0.05s, top 0.4s ease-out 0.05s, height 0.4s ease-out 0.05s, width 0.4s ease-out 0.05s, font-size 0.4s 0.5s, right 0.2s;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+footer .coypyright {
+  padding: 3rem 0;
+}
+footer .coypyright p {
+  font-size: 2rem;
+}
+footer ul {
+  display: flex;
+  gap: 2rem;
+}
+footer ul li {
+  font-size: 5rem;
+}
+footer ul li:hover {
+  cursor: pointer;
+}
+
 .button-general {
   cursor: pointer;
   text-decoration: none;
@@ -749,6 +773,83 @@ nav ul {
   transform: rotate(45deg);
 }
 
+.contacts-background {
+  background-color: #4c5053;
+  color: white;
+}
+
+.contacts__container {
+  max-width: 90%;
+  margin-inline: auto;
+  padding-bottom: 10rem;
+}
+.contacts__container h2 {
+  margin: 1rem 0 4rem 0.5rem;
+}
+
+.contacts-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-evenly;
+  gap: 3rem;
+  font-size: 5rem;
+}
+.contacts-flex li {
+  color: lightgray;
+  border: 2px solid lightgray;
+  padding: 3rem;
+  border-radius: 1rem;
+  background-color: rgba(48, 58, 60, 0.95);
+  box-shadow: 0 0.5rem 30px 10px rgba(0, 0, 0, 0.24);
+}
+.contacts-flex li:hover {
+  cursor: pointer;
+  -webkit-animation: giggle 0.65s ease-in-out;
+          animation: giggle 0.65s ease-in-out;
+}
+
+@-webkit-keyframes giggle {
+  0% {
+    transform: rotate(40deg) translate(0, -1%);
+  }
+  20% {
+    transform: rotate(-40deg) translate(0, -2%);
+  }
+  40% {
+    transform: rotate(15deg) translate(0, -5%);
+  }
+  60% {
+    transform: rotate(-15deg) translate(0, -2%);
+  }
+  80% {
+    transform: rotate(5deg) translate(0, -1%);
+  }
+  100% {
+    transform: rotate(-5deg) translate(0, 0);
+  }
+}
+
+@keyframes giggle {
+  0% {
+    transform: rotate(40deg) translate(0, -1%);
+  }
+  20% {
+    transform: rotate(-40deg) translate(0, -2%);
+  }
+  40% {
+    transform: rotate(15deg) translate(0, -5%);
+  }
+  60% {
+    transform: rotate(-15deg) translate(0, -2%);
+  }
+  80% {
+    transform: rotate(5deg) translate(0, -1%);
+  }
+  100% {
+    transform: rotate(-5deg) translate(0, 0);
+  }
+}
 .parcour-background {
   background-color: #4c5053;
   color: white;
@@ -757,7 +858,7 @@ nav ul {
 .parcours__container {
   max-width: 90%;
   margin: 12rem auto 0 auto;
-  padding-bottom: 12rem;
+  padding-bottom: 4rem;
 }
 .parcours__container h2 {
   margin: 1rem 0 4rem 0.5rem;

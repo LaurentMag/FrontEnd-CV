@@ -24,6 +24,7 @@ html {
   height: 100vh;
 }
 
+// ------------------
 .parallax__group::before {
   content: "";
   position: absolute;
@@ -35,8 +36,7 @@ html {
   min-height: 100vh;
 }
 
-// ----------------------------------------------------------------
-
+// ------------------
 .parallax__heading {
   z-index: -1;
   position: absolute;
@@ -66,7 +66,6 @@ main {
     }
     h2 {
       margin-left: $margin-about-me-left-h2;
-
     }
 
     h3 {
