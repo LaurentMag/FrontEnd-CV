@@ -27,3 +27,7 @@ function funcModalMove(funcParam) {
 document.querySelector('.hello').scrollIntoView({ 
   behavior: 'smooth' 
 });
+
+
+// let domtokenToArray = [...square.classList]
+// console.log(domtokenToArray)

@@ -8,5 +8,6 @@
     "package.json": true,
     "package-lock.json": true,
     "humans.txt": true
-  }
+  },
+  "liveServer.settings.port": 5501
 }
